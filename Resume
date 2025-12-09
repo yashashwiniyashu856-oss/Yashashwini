@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Website</title>
+
+<!-- ====== STYLE.CSS INCLUDED ====== -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+    }
+
+    header {
+        background: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 60px;
+        background: #4CAF50;
+        color: white;
+    }
+
+    .content-box {
+        width: 80%;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .bio-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .bio-table th, .bio-table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: #333;
+        color: white;
+        margin-top: 20px;
+    }
+
+    /* Hide sections */
+    .page-section {
+        display: none;
+    }
+
+    /* Show active section */
+    .active {
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Welcome to My Website</h1>
+<nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('biodata')">Bio-data</a>
+    <a href="#" onclick="showPage('resume')">Resume</a>
+</nav>
+</header>
+
+<!-- ================= HOME PAGE ================= -->
+<section id="home" class="page-section active">
+    <div class="hero">
+        <h2>Hello, I'm Yashaswini C D</h2>
+        <p>A short introduction about me. Click the menu to explore more!</p>
+    </div>
+</section>
+
+<!-- ================= BIODATA PAGE ================= -->
+<section id="biodata" class="page-section">
+    <div class="content-box">
+        <h2>Bio-Data</h2>
+        <table class="bio-table">
+            <tr><th>Name</th><td>Yashaswini C D</td></tr>
+            <tr><th>Date of Birth</th><td>26/01/2006</td></tr>
+            <tr><th>Gender</th><td>Female</td></tr>
+            <tr><th>Nationality</th><td>India</td></tr>
+            <tr><th>Languages</th><td>Kannada, English</td></tr>
+            <tr><th>Address</th><td>Chennagiri, Davangere, Karnataka</td></tr>
+            <tr><th>Email</th><td>yashashwiniyashu856@gmail.com</td></tr>
+        </table>
+    </div>
+</section>
+
+<!-- ================= RESUME PAGE ================= -->
+<section id="resume" class="page-section">
+    <div class="content-box">
+        <h2>My Resume</h2>
+
+        <h3>Career Objective</h3>
+        <p>To secure a responsible position where I can effectively contribute my skills.</p>
+
+        <h3>Education</h3>
+        <ul>
+            <li><strong>B.E Computer Science</strong> — Akshay Institute of Technology, Tumakuru (2021–202)</li>
+            <li><strong>PU College</strong> — Siddaganga PU Collage , Davanagere (2019)</li>
+        </ul>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML, CSS, JavaScript, jQuery</li>
+            <li>Communication & Leadership</li>
+        </ul>
+
+        <h3>Projects</h3>
+        <ul>
+            <li>Portfolio Website</li>
+            <li>Fake News Detection</li>
+        </ul>
+
+        <h3>Work Experience</h3>
+        <p>Fresher</p>
+    </div>
+</section>
+
+<footer>
+<p>© 2025 Yashaswini C D</p>
+</footer>
+
+<!-- ====== SCRIPT.JS INCLUDED ====== -->
+<script>
+function showPage(pageId) {
+    document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+}
+console.log("Website Loaded Successfully!");
+</script>
+
+</body>
+</html>
